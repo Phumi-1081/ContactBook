@@ -11,6 +11,11 @@
     <button id="addContact" type="button">Add Contact</button>
     <script src="config.js"></script>
     <script>
+      //refresh button-fetch contacts//
+      document
+        .getElementById("refresh")
+        .addEventListener("click", fetchContacts);
+      //add contact/fetch
       function fetchContacts() {
         fetch(rootPath + "controller/get-contacts/")
           .then(function (response) {
