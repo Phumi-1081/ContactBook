@@ -15,6 +15,11 @@
       document
         .getElementById("refresh")
         .addEventListener("click", fetchContacts);
+      //call event listener/fetch
+      document
+        .getElementById("addContact")
+        .addEventListener("click", addContact);
+
       //add contact/fetch
       function fetchContacts() {
         fetch(rootPath + "controller/get-contacts/")
@@ -40,6 +45,10 @@
         }
         output += "</table>";
         document.getElementById("table").innerHTML = output;
+      }
+      //function to open a new window-the add contact page
+      function addContact() {
+        window.open("add-contact.html", "_self");
       }
     </script>
   </body>
