@@ -34,7 +34,8 @@
         e.preventDefault();
         const form = new FormData(document.querySelector("#editForm"));
         form.append("apikey", apikey);
-        fetch(rootPath + "controller/insert-contact", {
+        //where to fetch the file/to send the request//
+        fetch(rootPath + "controller/insert-contact/", {
           method: "POST",
           hearders: { Accept: "application/jason, *.*" },
           body: form,

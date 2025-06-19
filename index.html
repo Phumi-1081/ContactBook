@@ -35,7 +35,7 @@
         output = "<table>";
         for (a in data) {
           output += `
-            <tr> <td>
+            <tr onclick="editContact(${data[a].id})"> <td>
                 <img src="${rootPath}controller/uploads/${data[a].avatar}"/>
                 </td>
                 <td><h5>${data[a].firstname}</h5></td>
@@ -49,6 +49,10 @@
       //function to open a new window-the add contact page
       function addContact() {
         window.open("add-contact.html", "_self");
+      }
+      //to enable the edit function
+      function editContact(id) {
+        window.open("edit-contact.html?id=" + id, "_self");
       }
     </script>
   </body>
